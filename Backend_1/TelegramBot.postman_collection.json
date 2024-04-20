@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "9e35de4a-9c1f-48cf-8204-e0999fc1ef40",
+		"name": "TelegramBot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34395315"
+	},
+	"item": [
+		{
+			"name": "info_ getMe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/getMe",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"getMe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUpdates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/getUpdates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"getUpdates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"1006266594\",\n    \"text\": \"from json\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/sendMessage?text=Success from params&chat_id=1006266594",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"sendMessage"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Success from params"
+						},
+						{
+							"key": "chat_id",
+							"value": "1006266594"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendPhoto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chat_id",
+							"value": "1006266594",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1eefee3d-8e54-4740-9da8-f37d3d5048a5"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/sendPhoto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"sendPhoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendPhoto pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chat_id",
+							"value": "1006266594",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1eefee73-0d21-4980-a852-6f36ad8e5349"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/sendPhoto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"sendPhoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendPhoto doc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chat_id",
+							"value": "1006266594",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1eefee78-1e2d-40d0-ac16-107ea457a338"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/sendPhoto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"sendPhoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserProfilePhotos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>File ID</th>",
+							"        <th>File Unique ID</th>",
+							"        <th>File Size</th>",
+							"        <th>Width</th>",
+							"        <th>Height</th>",
+							"    </tr>",
+							"    ",
+							"    {{#each response.result.photos}}",
+							"        {{#each this}}",
+							"            <tr>",
+							"                <td>{{file_id}}</td>",
+							"                <td>{{file_unique_id}}</td>",
+							"                <td>{{file_size}}</td>",
+							"                <td>{{width}}</td>",
+							"                <td>{{height}}</td>",
+							"            </tr>",
+							"        {{/each}}",
+							"    {{/each}}",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    var res = pm.response.json();",
+							"    return { response: res };",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo/getUserProfilePhotos?user_id=1006266594",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot6634559251:AAHlaIH-OgA_lGj6VEiaAxCsN_Z_tAj1puo",
+						"getUserProfilePhotos"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1006266594"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

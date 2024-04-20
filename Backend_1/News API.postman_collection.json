@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "8a66f4ea-c696-492e-a144-969b28cc7efc",
+		"name": "News API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34395315"
+	},
+	"item": [
+		{
+			"name": "All_Linux_News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=linux&apiKey=4e9dd456fcfc4a2db8d19a4340ebc87b",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "linux"
+						},
+						{
+							"key": "apiKey",
+							"value": "4e9dd456fcfc4a2db8d19a4340ebc87b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Разработка_15days",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>Title</th>",
+							"        <th>Author</th>",
+							"        <th>Description</th>",
+							"        <th>Published At</th>",
+							"    </tr>",
+							"    ",
+							"    {{#each response.articles}}",
+							"        <tr>",
+							"            <td>{{title}}</td>",
+							"            <td>{{author}}</td>",
+							"            <td>{{description}}</td>",
+							"            <td>{{publishedAt}}</td>",
+							"        </tr>",
+							"    {{/each}}",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return {response: pm.response.json()}",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=Разработка&language=ru&from=2024-04-05&to=2024-04-20&apiKey=4e9dd456fcfc4a2db8d19a4340ebc87b",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Разработка"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						},
+						{
+							"key": "from",
+							"value": "2024-04-05"
+						},
+						{
+							"key": "to",
+							"value": "2024-04-20"
+						},
+						{
+							"key": "apiKey",
+							"value": "4e9dd456fcfc4a2db8d19a4340ebc87b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3Pages10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>Title</th>",
+							"        <th>Description</th>",
+							"        <th>Author</th>",
+							"        <th>Published At</th>",
+							"    </tr>",
+							"    ",
+							"    {{#each response.articles}}",
+							"        <tr>",
+							"            <td>{{title}}</td>",
+							"            <td>{{description}}</td>",
+							"            <td>{{author}}</td>",
+							"            <td>{{publishedAt}}</td>",
+							"        </tr>",
+							"    {{/each}}",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return {response: pm.response.json()}",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=linux&language=ru&page=3&pageSize=10&apiKey=4e9dd456fcfc4a2db8d19a4340ebc87b",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "linux"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "apiKey",
+							"value": "4e9dd456fcfc4a2db8d19a4340ebc87b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top_headlines",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/top-headlines?country=ru&category=science&apiKey=4e9dd456fcfc4a2db8d19a4340ebc87b",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"top-headlines"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "ru"
+						},
+						{
+							"key": "category",
+							"value": "science"
+						},
+						{
+							"key": "apiKey",
+							"value": "4e9dd456fcfc4a2db8d19a4340ebc87b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "devkg page1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>ID</th>",
+							"        <th>Type</th>",
+							"        <th>Slug</th>",
+							"        <th>Price From</th>",
+							"        <th>Price To</th>",
+							"        <th>Position</th>",
+							"        <th>City</th>",
+							"        <th>Salary</th>",
+							"        <th>Created At</th>",
+							"        <th>Updated At</th>",
+							"    </tr>",
+							"    ",
+							"    <tr>",
+							"        <td>{{response.result.job.id}}</td>",
+							"        <td>{{response.result.job.type}}</td>",
+							"        <td>{{response.result.job.slug}}</td>",
+							"        <td>{{response.result.job.price_from}}</td>",
+							"        <td>{{response.result.job.price_to}}</td>",
+							"        <td>{{response.result.job.position}}</td>",
+							"        <td>{{response.result.job.city}}</td>",
+							"        <td>{{response.result.job.salary}}</td>",
+							"        <td>{{response.result.job.created_at}}</td>",
+							"        <td>{{response.result.job.updated_at}}</td>",
+							"    </tr>",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return {response: pm.response.json()}",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devkg.com/api/pages/jobs?page=1",
+					"protocol": "https",
+					"host": [
+						"devkg",
+						"com"
+					],
+					"path": [
+						"api",
+						"pages",
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "devkg sibers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devkg.com/api/pages/job?slug=junior-s-asp-net-developer-sibers-12534",
+					"protocol": "https",
+					"host": [
+						"devkg",
+						"com"
+					],
+					"path": [
+						"api",
+						"pages",
+						"job"
+					],
+					"query": [
+						{
+							"key": "slug",
+							"value": "junior-s-asp-net-developer-sibers-12534"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
